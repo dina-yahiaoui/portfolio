@@ -1,0 +1,882 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: cursive;
+}
+
+
+/**  Start Header **/
+
+
+/** Add the opacity to the image only: https://css-tricks.com/snippets/css/transparent-background-images/**/
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 60px 16px;
+}
+
+#header::after {
+    content: "";
+    background: url('../portfolio/img/background.jpg') center no-repeat;
+    background-size: cover;
+    opacity: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/** Start Intro**/
+
+#Intro h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #262534;
+    text-shadow: 2px 2px #6c63ff; 
+}
+
+#Intro h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #262534;
+}
+
+#Intro .name {
+    color: #6c63ff;
+    text-shadow: 1px 1px #262534;
+}
+
+#Intro #view-more {
+    background-color: rgb(162, 210, 255);
+    color: white;
+    font-size: 18px;
+    padding: 15px 42px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+    border: 2px solid white;
+    text-decoration: none;
+}
+
+#Intro #view-more:hover {
+    background-color: rgb(162, 210, 255);
+}
+
+#Intro #view-more i {
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+
+/* Start Nav  */
+
+header nav {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(255, 175, 204);
+    display: grid;
+    align-items: center;
+    border-bottom: 4px solid rgb(162, 210, 255);
+    z-index: 1;
+}
+
+header nav ul {
+    list-style-type: none;
+    background-color: rgb(255, 175, 204);
+}
+
+header li.nav-item {
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+
+header li.nav-item:first-of-type {
+    margin-left: 24px;
+}
+
+header li.nav-item a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+header li.nav-item a:hover {
+    text-decoration: underline;
+}
+
+header #more-drop-down-menu a:last-of-type:hover {
+    text-decoration: none;
+}
+
+header .nav-item a.active {
+    text-decoration: underline;
+    color: rgb(162, 210, 255);
+}
+
+
+/** Start More Drop Down**/
+
+header nav #more-drop-down-menu i {
+    margin-left: 8px;
+    vertical-align: bottom;
+}
+
+header li.nav-item ul {
+    display: none;
+}
+
+/*header li.nav-item:hover ul {
+    display: block;
+    width: 150px;
+    border-top: 2px solid #6c63ff;
+    background-color: #262534;
+    box-shadow: 0 2px 5px #3f3d56;
+    padding: 20px;
+    position: absolute;
+    left: 8px;
+}*/
+
+header li.nav-item:hover ul li {
+    display: block;
+    list-style: none;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #3f3d56;
+}
+
+header li.nav-item:hover ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header li.nav-item:hover ul li a:hover {
+    border-bottom: 1px solid #6c63ff;
+}
+
+header nav #dropdown-more li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav #dropdown-more li a:hover {
+    border-bottom: 1px solid #6c63ff;
+}
+
+#dropdown-wrapper-more:hover #dropdown-more {
+    display: block;
+}
+
+
+/** End More Drop Down**/
+
+
+/** Stick the nav in the top after scrolling**/
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+
+header nav.sticky {
+    /** Let us add some animation hh**/
+    animation: slide-down 0.7s;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+menu {
+    padding-top: 2px;
+}
+
+
+/* End Nav */
+
+
+/**  END Header **/
+
+
+/************************** Start Menu **********************/
+
+
+/** Start Section header: common**/
+
+menu .section {
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+menu .section-header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-top: 30px;
+}
+
+.section-header h3 {
+    font-size: 46px;
+    color: #262534;
+    margin-bottom: 12px;
+}
+
+.section-header hr {
+    border: 2px solid rgb(rgb(162, 210, 255));
+    width: 300px;
+}
+
+
+/*** End Section header ***/
+
+
+/********* Start About ********/
+
+#about {
+    display: grid;
+    grid-template-areas: 'header header' 'shrotIntro skills';
+    grid-template-columns: 50% 50%;
+    column-gap: 24px;
+}*/
+
+#shortIntro {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    grid-area: shrotIntro;
+}
+
+#skills {
+    grid-area: skills;
+    padding: 80px 24px;
+}
+
+
+/*** Start short Intro ***/
+
+#shortIntroImg img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 2px 0px 2px gray;
+    margin-bottom: 25px;
+}
+
+#shortIntroText h4 {
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 8px;
+}
+
+#shortIntroText p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #2d3436;
+    ;
+}
+
+
+/*** End short Intro ***/
+
+
+/** Start Skills Bars **/
+
+.progress-wrapper {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    background-color: #fefefe;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+}
+
+.skillName,
+.progress-bar,
+.SkillPercent {
+    
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.skillName {
+    padding-left: 8px;
+    color: #2d3436;
+    width: 120px;
+    
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress-bar p {
+    padding-top: 5px;
+    float: right;
+    padding-right: 5px;
+}
+
+.SkillPercent {
+    color: #2d3436;
+}
+
+.progress {
+    background: #03045e;
+    height: 30px;
+    width: 0;
+     transition: width 0.5s ease-in;
+}
+
+
+/** End Skills Bars **/
+
+
+/********* End About ********/
+
+
+/********* Start  Project ********/
+
+#projects {
+    height: 100vh;
+    background-color: #f0e6ef;
+}
+
+
+/** Start Tabs **/
+
+.tab-container {
+
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+    position: relative;
+    
+}
+
+#projects input,
+.tab-content {
+    clear: both;
+    padding-top: 10px;
+    display: none;
+    gap: 30px;
+   
+}
+
+#projects label {
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 0.5em 1.5em;
+    color: #757575;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F4F4F4;
+   
+}
+
+
+/* #tab1:checked~#all, */
+
+#tab2:checked~#templates,
+#tab3:checked~#js {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 20px;
+    color: #999;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-container [id^="tab"]:checked+label {
+    background: #fff;
+    box-shadow: inset 0 -3px #03045e;
+    /* box-shadow: inset 0 -3px #0CE; */
+    
+}
+
+
+/** End Tabs **/
+
+
+/** Start All content **/
+
+.project-card-wrapper {
+    height: 270px;
+    overflow: hidden;
+}
+
+.project-card-wrapper:hover .project-card-hover {
+    transform: translateY(-100%);
+}
+
+.project-card-wrapper:hover .project-card-img {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project-card-img,
+.project-card-hover {
+    height: 100%;
+    transition: transform .3s ease-in-out;
+}
+
+.project-card-wrapper:hover .project-card-img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.project-card-img {
+    height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.project-card-hover {
+    background: -webkit-linear-gradient(180deg, rgb(244, 244, 244, 0.95), rgb(255, 255, 255, 0.9));
+    background: linear-gradient(180deg, rgb(244, 244, 244, 0.95), rgb(255, 255, 255, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.project-card-hover a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    color: #03045e;
+    display: block;
+}
+
+.project-card-hover a:hover {
+    color: #03045e;
+    text-decoration: underline;
+}
+
+.project-card-hover a i {
+    margin-left: 4px;
+    vertical-align: bottom;
+}
+
+
+/** End All content **/
+
+
+/********* End  Project ********/
+
+
+/**** Start Contact Section ****/
+
+#contact {
+    height: 90vh;
+}
+
+#contact-form {
+    width: 80%;
+    max-width: 600px;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+#contact-form input,
+#contact-comment {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    background-color: #cdb4db;
+    border: none;
+    font-size: 18px;
+    color: #d6d4ff;
+    border-radius: 5px;
+}
+
+form #contact-submit {
+    background-color: rgb(162, 210, 255);
+    width: 30%;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    ;
+}
+
+form #contact-submit:hover {
+    background-color: rgb(255, 175, 204);
+}
+
+
+/**** END Contact Section *****/
+
+
+/************************** End Menu **********************/
+
+
+/************************ Start Footer ********************/
+
+footer {
+    width: 100%;
+    height: 35vh;
+    background-color: #ffc8dd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-carret-top {
+    padding: 6px 16px;
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    top: -3px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  rgb(162, 210, 255);
+}
+
+#footer-contacts {
+    padding-top: 24px;
+}
+
+#footer-contacts i {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: center;
+    color: rgb(84, 84, 84);
+    border: 2px solid rgb(84, 84, 84);
+    border-radius: 50%;
+    padding: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+#footer-contacts i:hover {
+    color: white;
+    border: none;
+}
+
+#footer-contacts .fa-facebook-f:hover {
+    background-color: #3B5998;
+    transition: 0.7s;
+}
+
+#footer-contacts .fa-linkedin-in:hover {
+    background-color: #0077b5;
+    transition: 0.7s;
+}
+
+
+
+
+
+#footer-contacts .fa-github-alt:hover {
+    background-color: #24292e;
+    transition: 0.7s;
+}
+
+
+
+
+footer p {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+
+/************************  End Footer  *******************/
+
+
+/************** Start Responsive part ****************/
+
+
+/** Style icon nav for responsive **/
+
+li.icon-nav {
+    color: white;
+    float: right;
+    margin-right: 12px;
+    display: none;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .section-header h3 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    menu .section-header {
+        margin-bottom: 26px;
+        padding-top: 20px;
+    }
+    .section-header hr {
+        border: 1.5px solid #03045e;
+        width: 180px;
+    }
+    /************** Start About page *********************/
+    #about {
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+        /*display: grid;
+        grid-template-areas: 'header header header' 'shrotIntro shrotIntro shrotIntro' 'skills skills skills';*/
+    }
+    #shortIntro {
+        display: flex;
+        text-align: center;
+    }
+    #shortIntroImg img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+    #shortIntroText {
+        padding-right: 24px;
+    }
+    #shortIntroText h4 {
+        font-size: 18px;
+    }
+    #shortIntroText p {
+        font-size: 15px;
+        
+    }
+    #skills {
+        width: 95%;
+    }
+    /************** End About page *********************/
+    /************** Start Project page *********************/
+    #projects {
+        margin-top: 10px;
+        height: 105vh;
+    }
+    .tab-container {
+        padding-top: 10px;
+    }
+    #projects label {
+        padding: 0em 1.5em 0.5em;
+    }
+    #tab2:checked~#templates,
+    #tab3:checked~#js {
+        height: 540px;
+        overflow: auto;
+        grid-template-columns: repeat(2, auto);
+    }
+    .project-card-wrapper {
+        height: 290px;
+        overflow: hidden;
+    }
+    .project-card-img {
+        height: 290px;
+    }
+    .project-card-hover {
+        font-size: 28px;
+    }
+    /************** END Project page *********************/
+    /************************ Start Footer ******************/
+    footer {
+        height: 40vh;
+    }
+    #footer-contacts {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 4px;
+        row-gap: 4px;
+    }
+    /************************ END Footer *****************/
+}
+
+
+/* Extra small devices (phones, 500px and down) */
+
+@media(max-width: 600px) {
+    /************** Start Home page *********************/
+    
+    #Intro h1 {
+        margin-bottom: 18px;
+    }
+    #Intro h3 {
+        margin-bottom: 70px;
+    }
+    #Intro .name {
+        text-shadow: none;
+    }
+    header nav li.nav-item {
+        display: none;
+    }
+    header nav .icon-nav {
+        display: inline-block;
+        margin-top: 8px;
+    }
+    #toggleButton:checked~li.nav-item {
+        display: inline;
+    }
+    #toggleButton:checked~li.nav-item>a {
+        display: block;
+        padding-left: 14px;
+        font-size: 18px;
+    }
+    #toggleButton:checked~li.nav-item>a[href="#home"] {
+        margin-top: 20px;
+    }
+    /************** End Home page **********************/
+    /************** Start About page **********************/
+    #about {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #shortIntro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #shortIntroImg img {
+        width: 130px;
+        height: 120px;
+        box-shadow: none;
+        margin-bottom: 4px;
+    }
+    #shortIntroText {
+        padding: 2px 24px 10px;
+    }
+    #shortIntroText h4 {
+        font-size: 18px;
+    }
+    #shortIntroText p {
+        font-size: 15px;
+    }
+    #skills {
+        width: 100%;
+    }
+    /************** End About page **********************/
+    /************** Start Project page *********************/
+    #projects {
+        margin-top: 10px;
+        height: 95vh;
+    }
+    #tab2:checked~#templates,
+    #tab3:checked~#js {
+        height: 530px;
+        overflow: auto;
+        padding: 10px;
+        grid-template-columns: repeat(1, auto);
+    }
+    .project-card-wrapper {
+        height: 500px;
+        overflow: hidden;
+    }
+    .project-card-img {
+        height: 500px;
+    }
+    .project-card-hover {
+        font-size: 36px;
+    }
+    #projects label {
+        font-size: 16px;
+        width: 30%;
+        padding: 0.5em 0.2em 0.6em;
+        text-align: left;
+    }
+    /************** END Project page *********************/
+    /************** Start Contact page *********************/
+    #contact-form {
+        width: 90%;
+        max-width: 700px;
+    }
+    /************** END Contact page *********************/
+}
+
+@media(max-width: 400px) {
+    /************** Start About page *********************/
+    #about {
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+    }
+    /************** Start About page *********************/
+    /************** Start Project page *********************/
+    #projects {
+        margin-top: 10px;
+        height: 120vh;
+    }
+    /************** END Project page *********************/
+}
+
+
+/************** End Responsive part ****************/
+
+
+/** Color Used 
+1. DARK 262534
+2. Nrml 3f3d56
+3. Accent 6c63ff
+4. Gray One d6d4ff
+5. Gray 2 f1f0ff
+6. Dark gray #2d3436;
+7.1 orange #E87E04;
+7. Orange hover F9690E
+**/

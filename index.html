@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dina YAHIAOUI Portfilio</title>
+    <link rel="shortcut icon" type="image/ico" href="..prtfolio/img/icon.PNG">
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add the fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
+
+    <!-- Add font awsome -->
+    <script src="https://kit.fontawesome.com/1d0c2e40b1.js" crossorigin="anonymous"></script>
+    <!-- Add jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <!-- Start Header  -->
+    <header id="home" class="section">
+        <!-- Start Intro -->
+        <div id="header">
+            <div id="Intro">
+                <h1>Hello, I'm Dina YAHIAOUI <span class="name"></span></h1>
+                <h3>First-Year IT Student Passionate About AI and Cybersecurity</h3>
+                <a id="view-more" href="#about">Have a look!<i class="fas fa-arrow-right"></i></a>
+                <!-- <button id="view-more"> Have a look!<i class="fas fa-arrow-right"></i></button> -->
+            </div>
+        </div>
+        <!-- End Intro -->
+        <!-- Start Nav -->
+        <nav>
+            <ul>
+                <!-- Start the icon for to make the nav bar responsive -->
+                <label for="toggleButton">
+                    <li class="icon-nav">
+                        <a>
+                            <i class="fa fa-bars fa-2x"></i>
+                        </a>
+                    </li>
+                </label>
+                <!-- End the icon for to make the nav bar responsive -->
+                <input type="checkbox" id="toggleButton" style="display: none;" />
+
+                <li class="nav-item"><a href="#home" class="active">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+               
+
+                <!-- END Drop Down Menu -->
+            </ul>
+        </nav>
+        <!-- End Nav -->
+
+    </header>
+    <!-- End Header  -->
+    <menu>
+        <!-- Start about Section  -->
+        <section id="about" class="section">
+
+            <header class="section-header">
+                <h3>About Me </h3>
+                <hr>
+            </header>
+
+            <!-- Start Short Intro -->
+            <div id="shortIntro">
+                <div id="shortIntroImg">
+                    <img src="../portfolio/img/dina.jpg" alt="Dina yahiaoui ">
+                </div>
+                <div id="shortIntroText">
+                    <h4>
+                        Who am I?
+                    </h4>
+                    <p>Hello! My name is Dina, and I am currently a first-year IT student at La Plateforme. I have a deep interest in two fascinating fields of technology:  (AI) and Cybersecurity.
+
+                        In the field of AI, I am particularly intrigued by how machines can simulate human intelligence to solve complex problems, On the other hand, Cybersecurity captures my attention because of its critical role in protecting data, systems, and networks in an increasingly digital world. I am passionate about understanding vulnerabilities, designing secure systems, and staying ahead of potential threats in this ever-evolving domain.</p>
+                </div>
+            </div>
+            <!-- End Short Intro -->
+            <!-- Start Skills -->
+            <!-- Add the skills using JavaScript -->
+            <div id="skills">
+            </div>
+            <!-- End Skills -->
+        </section>
+        <!-- End about Section  -->
+        <!-- Start Project Section  -->
+        <section id="projects" class="section">
+            <header class="section-header">
+                <h3>Projects </h3>
+                <hr>
+            </header>
+            <!-- Start tabs  -->
+            <div class="tab-container">
+                <!-- <input id="tab1" type="radio" name="tabs">
+                <label for="tab1"><span>All</span></label> -->
+
+                <input id="tab2" type="radio" name="tabs" checked>
+                
+
+                
+                <!-- Start All content -->
+                <!-- <div id="all" class="tab-content">
+
+                </div> -->
+                <!-- END All content -->
+                <!-- Start Template content -->
+                <div id="templates" class="tab-content">
+                </div>
+                <!-- End Template content -->
+                <!-- Start JS content -->
+                <div id="js" class="tab-content">
+                </div>
+                <!-- End JS content -->
+
+            </div>
+            <!-- END tabs  -->
+
+        </section>
+        <!-- End Project Section  -->
+
+        <!-- Start Contact Section -->
+        <section id="contact" class="section">
+            <header class="section-header">
+                <h3>Contact Me </h3>
+                <hr>
+                <form id="contact-form" action="#" method="POST">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Enter email" required>
+                    <textarea name="contact-comment" id="contact-comment" cols="30" rows="10" placeholder="Your message" required></textarea>
+                    <input id="contact-submit" type="submit" value="Submit">
+                </form>
+            </header>
+        </section>
+        <!-- End Contact Section -->
+    </menu>
+    <!-- Start Contact Section -->
+
+
+    <footer>
+        <div>
+            <a id="footer-carret-top" href="#home"><i class="fas fa-angle-up"></i></a>
+        </div>
+
+        <div id="footer-contacts">
+            <a href="https://www.linkedin.com/in/dina-yahiaoui-b8b50115a/" target="_balnk"> <i class="fab fa-linkedin-in fa-2x"></i></a>
+            
+            <a href="https://github.com/dina-yahiaoui" target="_balnk"> <i class="fab fa-github-alt fa-2x"></i></a>
+            
+                
+            <a href="https://www.facebook.com/share/1BJFjgzbFQ/?mibextid=LQQJ4d" target="_balnk"> <i class="fab fa-facebook-f fa-2x"></i></a>
+            
+        </div>
+        <div>
+            <p>
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- End Contact Section -->
+
+    <script src="../portfolio/script.js"></script>
+
+
+</body>
+
+</html

@@ -23,7 +23,7 @@ h6 {
 /**  Start Header **/
 
 
-/** Add the opacity to the image only: https://css-tricks.com/snippets/css/transparent-background-images/**/
+
 
 #header {
     width: 100%;
@@ -41,7 +41,7 @@ h6 {
     content: "";
     background: url('../portfolio/img/background.jpg') center no-repeat;
     background-size: cover;
-    opacity: 50%;
+    opacity: 20%;
     top: 0;
     left: 0;
     bottom: 0;
@@ -67,12 +67,12 @@ h6 {
 }
 
 #Intro .name {
-    color: #6c63ff;
+    color: #7f5539;
     text-shadow: 1px 1px #262534;
 }
 
 #Intro #view-more {
-    background-color: rgb(162, 210, 255);
+    background-color: #7f5539;
     color: white;
     font-size: 18px;
     padding: 15px 42px;
@@ -80,12 +80,12 @@ h6 {
     text-align: center;
     font-weight: bold;
     opacity: 1;
-    border: 2px solid white;
+    border: 2px solid #7f5539;
     text-decoration: none;
 }
 
 #Intro #view-more:hover {
-    background-color: rgb(162, 210, 255);
+    background-color: #e6ccb2;
 }
 
 #Intro #view-more i {
@@ -99,17 +99,17 @@ h6 {
 header nav {
     width: 100%;
     height: 8vh;
-    background-color: rgb(255, 175, 204);
+    background-color: #e6ccb2;
     display: grid;
     align-items: center;
-    border-bottom: 4px solid rgb(162, 210, 255);
+    border-bottom: 4px solid #e6ccb2;
     z-index: 1;
 }
 
-header nav ul {
+/*header nav ul {
     list-style-type: none;
     background-color: rgb(255, 175, 204);
-}
+}*/
 
 header li.nav-item {
     display: inline-block;
@@ -139,7 +139,7 @@ header #more-drop-down-menu a:last-of-type:hover {
 
 header .nav-item a.active {
     text-decoration: underline;
-    color: rgb(162, 210, 255);
+    color: #9c6644;
 }
 
 
@@ -265,10 +265,10 @@ menu .section-header {
     margin-bottom: 12px;
 }
 
-.section-header hr {
+/*.section-header hr {
     border: 2px solid rgb(rgb(162, 210, 255));
     width: 300px;
-}
+}*/
 
 
 /*** End Section header ***/
@@ -281,7 +281,7 @@ menu .section-header {
     grid-template-areas: 'header header' 'shrotIntro skills';
     grid-template-columns: 50% 50%;
     column-gap: 24px;
-}*/
+}
 
 #shortIntro {
     display: flex;
@@ -388,7 +388,7 @@ menu .section-header {
 
 #projects {
     height: 100vh;
-    background-color: #f0e6ef;
+    background-color: #ede0d4;
 }
 
 
@@ -503,12 +503,12 @@ menu .section-header {
     text-decoration: none;
     text-align: center;
     font-weight: 600;
-    color: #03045e;
+    color: #7f5539;
     display: block;
 }
 
 .project-card-hover a:hover {
-    color: #03045e;
+    color: #7f5539;
     text-decoration: underline;
 }
 
@@ -545,7 +545,7 @@ menu .section-header {
     width: 100%;
     padding: 8px 12px;
     margin-bottom: 15px;
-    background-color: #cdb4db;
+    background-color: #ffedd8;
     border: none;
     font-size: 18px;
     color: #d6d4ff;
@@ -553,7 +553,7 @@ menu .section-header {
 }
 
 form #contact-submit {
-    background-color: rgb(162, 210, 255);
+    background-color: #7f5539;
     width: 30%;
     color: white;
     outline: none;
@@ -562,7 +562,7 @@ form #contact-submit {
 }
 
 form #contact-submit:hover {
-    background-color: rgb(255, 175, 204);
+    background-color: #e6ccb2;
 }
 
 
@@ -577,7 +577,7 @@ form #contact-submit:hover {
 footer {
     width: 100%;
     height: 35vh;
-    background-color: #ffc8dd;
+    background-color: #e6ccb2;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -593,7 +593,7 @@ footer {
     top: -3px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:  rgb(162, 210, 255);
+    background-color:  #7f5539;
 }
 
 #footer-contacts {
